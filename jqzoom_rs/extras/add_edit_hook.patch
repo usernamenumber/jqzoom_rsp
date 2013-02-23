@@ -1,0 +1,18 @@
+Index: pages/edit.php
+===================================================================
+--- pages/edit.php	(revision 4303)
++++ pages/edit.php	(working copy)
+@@ -358,8 +358,11 @@
+ <?php
+ if ($resource["has_image"]==1)
+ 	{
+-	?><img align="top" src="<?php echo get_resource_path($ref,false,($edit_large_preview?"pre":"thm"),false,$resource["preview_extension"],-1,1,checkperm("w"))?>" class="ImageBorder" style="margin-right:10px;"/><br />
+-	<?php
++	if (!hook('replaceeditpreviewimage')) 
++		{
++		?><img align="top" src="<?php echo get_resource_path($ref,false,($edit_large_preview?"pre":"thm"),false,$resource["preview_extension"],-1,1,checkperm("w"))?>" class="ImageBorder" style="margin-right:10px;"/><br />
++		<?php
++		}
+ 	}
+ else
+ 	{
