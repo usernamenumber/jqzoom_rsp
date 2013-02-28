@@ -23,7 +23,7 @@ function HookJQZoomViewReplacerenderinnerresourcepreview() {
 		return false; # Requires an original large JPEG file.
 	} 
 	
-	#print "<pre>RES\n"; print_r($resource); print "</pre>";
+	print "<pre>RES\n"; print_r($resource); print "</pre>";
 ?>
 <a href="<?php echo $largeurl?>" class="jqzoom" title="IMAGE ZOOM">
 	<img src="<?php echo $imageurl?>">

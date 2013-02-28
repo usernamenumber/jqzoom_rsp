@@ -1,4 +1,4 @@
-name: jqzoom_rs
+name: jqzoom_rsp
 author: Brad Smith
 version: 0.2
 desc: Uses Marco Renzi's JQZoom plugin to allow zooming on images (http://www.mind-projects.it/projects/jqzoom/)
