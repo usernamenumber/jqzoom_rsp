@@ -1,5 +1,5 @@
 <?php
-function HookJQZoomViewReplacerenderinnerresourcepreview() {
+function HookJqzoom_rspViewRenderinnerresourcepreview() {
 	global $baseurl,$plugins,$lang,$search,$offset,$archive,$order_by,$sort,$plugins,$download_multisize,$k,$access,$ref,$resource,$watermark;
 	
 	// watermark check
@@ -23,13 +23,14 @@ function HookJQZoomViewReplacerenderinnerresourcepreview() {
 		return false; # Requires an original large JPEG file.
 	} 
 	
-	print "<pre>RES\n"; print_r($resource); print "</pre>";
+	#print "<pre>RES\n"; print_r($resource); print "</pre>";
 ?>
 <a href="<?php echo $largeurl?>" class="jqzoom" title="IMAGE ZOOM">
-	<img src="<?php echo $imageurl?>">
+	<img src="<?php echo $imageurl?>" onload="jQuery(document).ready(function() { jQuery('.jqzoom').jqzoom(); });">
 </a>
 
 <?php	
 	return true;
 }
+
 ?>

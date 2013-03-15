@@ -1,5 +1,5 @@
 <?php
-function HookJQZoomEditReplaceeditpreviewimage() {
+function HookJqzoom_rspEditReplaceeditpreviewimage() {
 	global $baseurl,$plugins,$lang,$search,$offset,$archive,$order_by,$sort,$plugins,$download_multisize,$k,$access,$ref,$resource,$watermark;
 	
 	// watermark check
@@ -28,7 +28,7 @@ function HookJQZoomEditReplaceeditpreviewimage() {
 ?>
 <div>
 <a href="<?php echo $largeurl?>" class="jqzoom" title="IMAGE ZOOM">
-	<img src="<?php echo $imageurl?>">
+	<img src="<?php echo $imageurl?>" onload="jQuery(document).ready(function() { jQuery('.jqzoom').jqzoom(); });">
 </a>
 </div>
 
